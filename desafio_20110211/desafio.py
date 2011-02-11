@@ -23,20 +23,16 @@ Problema:
 
 """
 
-
-
 import unittest
 
 
 class Desafio1(unittest.TestCase):
-	
-	def test_pack_duplicates(self):
-		sampleList = ['a','a','a','a','b','c','c','a','a','d','e','e','e','e']
-    		self.assertEqual(
-                     [['a','a','a','a'],['b'],['c','c'],['a','a'],['d'],['e','e','e','e']],
-                     pack(sampleList)                     
-                     )	
+
+    def test_pack_duplicates(self):
+        sampleList = ['a','a','a','a','b','c','c','a','a','d','e','e','e','e']
+        self.assertEqual([['a','a','a','a'],['b'],['c','c'],['a','a'],['d'],['e','e','e','e']],
+                    pack(sampleList))
 
 
 if __name__ == '__main__':
-	unittest.main()	
+    unittest.main()    
