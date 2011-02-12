@@ -9,7 +9,7 @@ Problema:
     >>> x = ['a','a','a','a','b','c','c','a','a','d','e','e','e','e']
     >>> ret = pack(x)
     >>> ret
-    >>> [['a','a','a','a'],['b'],['c','c'],['a','a'],['d'],['e','e','e','e']]
+    >>> [['a','a','a','a','a','a'],['b'],['c','c'],['d'],['e','e','e','e']]
     >>> x = ['a', 'b', 'c']
     >>> ret = pack(x)
     >>> ret 
@@ -30,7 +30,7 @@ class Desafio1(unittest.TestCase):
 
     def test_pack_duplicates(self):
         sampleList = ['a','a','a','a','b','c','c','a','a','d','e','e','e','e']
-        self.assertEqual([['a','a','a','a'],['b'],['c','c'],['a','a'],['d'],['e','e','e','e']],
+        self.assertEqual([['a','a','a','a', 'a', 'a'],['b'],['c','c'],['d'],['e','e','e','e']],
                     pack(sampleList))
 
 
