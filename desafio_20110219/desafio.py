@@ -2,25 +2,53 @@
 Desafio PUG-PE  
 ID: 2
 Semana: 19/02/2011
+Formulado por : Daker Fernandes e Marcel Caraciolo
 
 Problema:
 
-    Escreva uma funcao que reverta a ordem das palavras em uma string. Por exemplo, sua funcao deve transformar a string 'Do or do not,
-    there is no try.'  para 'try. no is there not, or Do'.  Assuma que todas palavras sao separadas por espaco e trate todos os sinais de pontuacao
-    como caracteres.
+    Grafos sao redes consistindo de nos conectados por arcos. Em grafos direcionados, as conexoes entre os nos tem uma direcao;
+    diferente de grafos nao direcionados, onde nao ha uma direcao. Neste problema vamos focar em grafos direcionados. O nosso problema envolve
+    em descobrir o menor caminho entre dois nos dentro desse grafo. 
 
-    >>> x =  "attempt"
-    >>> ret = reverse_string(x)
+    A REPRESENTACAO DE UM GRAFO NO NOSSO PROBLEMA:
+     GRAFO graph com 6 nos (A-F) e 8 arcos representado como um dicionario.
+    
+     graph = {'A': ['B', 'C'],
+                 'B': ['C', 'D'],
+                 'C': ['D'],
+                 'D': ['C'],
+                 'E': ['F'],
+                 'F': ['C']}
+    
+    Seu trabalho eh construir uma funcao shortest_path que receba um grafo como representado acima, o no de partida e o no de chegada e retorne
+    uma lista ordenada do menor caminho a seguir a partir do no de partida ate o no de chegada. 
+    
+    Voce pode adicionar novos parametros a esta funcao se desejar (parametros opcionais que ajudem a resolver seu problema).
+    
+    >>> graph = {'A': ['B', 'C'],
+                 'B': ['C', 'D'],
+                 'C': ['D'],
+                 'D': ['C'],
+                 'E': ['F'],
+                 'F': ['C']}
+    >>> 
+
+    >>> ret = short_path(graph,'A','E')
     >>> ret
-    attempt
-    >>> x = 'I am going to jail.'
-    >>> ret = reverse_string(x)
-    jail. to going am I
-    >>> x = 'Python como linguagem eh poderosa, facil e divertida.'
-    >>> x = []
-    >>> ret = reverse_string(x)
+    []
+    >>> ret = short_path(graph,'A','D')
     >>> ret
-    divertida. e facil poderosa, eh linguagem como Python
+    ['A','C', 'D']
+    >>> ret = short_path(graph,'A','Z')
+    >>> ret
+    None
+    >>> ret = short_path({}, 'A','Z')
+    >>> ret
+    None
+    >>> ret = short_path(graph,'A','B')
+    >>> ret
+    ['A','B']
+
      
   Seu trabalho eh construir essa funcao.  Favor utilizar Testes usando doctest ou UnitTest para validar sua solucao.
 
@@ -31,21 +59,47 @@ import unittest
 
 class Desafio2(unittest.TestCase):
 
-    def test_simple_string(self):
-        sampleString = 'attempt'
-        self.assertEqual('attempt',
-                    reverse_string(sampleString))
+    def test_empty_graph(self):
+        graph = {}
+        self.assertEqual(None,
+                    short_path(graph,'A','B'))
 
-    def test_empty_string(self):
-        sampleString = ''
-        self.assertEqual('',
-                    reverse_string(sampleString))
+    def test_unknown_node(self):
+        graph = {'A': ['B', 'C'],
+                     'B': ['C', 'D'],
+                     'C': ['D'],
+                     'D': ['C'],
+                     'E': ['F'],
+                     'F': ['C']}
+        self.assertEqual(None, short_path(graph,'A','Z'))
 
-    def test_complex_string(self):
-        sampleString = 'Python como linguagem eh poderosa, facil e divertida.'
-        self.assertEqual('divertida. e facil poderosa, eh linguagem como Python',
-                    reverse_string(sampleString))
+    def test_inexistent_path(self):
+        graph = {'A': ['B', 'C'],
+                     'B': ['C', 'D'],
+                     'C': ['D'],
+                     'D': ['C'],
+                     'E': ['F'],
+                     'F': ['C']}
+        self.assertEqual([], short_path(graph,'A','E'))
 
+
+    def test_simple_path(self):
+        graph = {'A': ['B', 'C'],
+                     'B': ['C', 'D'],
+                     'C': ['D'],
+                     'D': ['C'],
+                     'E': ['F'],
+                     'F': ['C']}
+        self.assertEqual(['A','B'], short_path(graph,'A','B'))
+
+    def test_complex_path(self):
+        graph = {'A': ['B', 'C'],
+                     'B': ['C', 'D'],
+                     'C': ['D'],
+                     'D': ['C'],
+                     'E': ['F'],
+                     'F': ['C']}
+        self.assertEqual(['A','C','D'], short_path(graph,'A','D'))
 
 if __name__ == '__main__':
     unittest.main()    
