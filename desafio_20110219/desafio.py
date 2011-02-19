@@ -22,14 +22,14 @@ Problema:
     >>> ret
     divertida. e facil poderosa, eh linguagem como Python
      
-  Seu trabalho eh construir essa lista de elementos.  Favor utilizar Testes usando doctest ou UnitTest para validar sua solucao.
+  Seu trabalho eh construir essa funcao.  Favor utilizar Testes usando doctest ou UnitTest para validar sua solucao.
 
 """
 
 import unittest
 
 
-class Desafio1(unittest.TestCase):
+class Desafio2(unittest.TestCase):
 
     def test_simple_string(self):
         sampleString = 'attempt'
