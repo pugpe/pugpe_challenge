@@ -86,7 +86,8 @@ class Desafio2(unittest.TestCase):
         graph = {'A': ['B', 'C'],
                  'B': ['D', 'E'],
                  'C': ['D'],
-                 'D': ['E']}
+                 'D': ['E'],
+                 'E': []}
 
         self.assertEqual([('A','B','E')], short_path(graph,'A','E'))
 
