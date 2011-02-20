@@ -82,6 +82,13 @@ class Desafio2(unittest.TestCase):
                      'F': ['C']}
         self.assertEqual([], short_path(graph,'A','E'))
 
+    def test_complex_path(self):    
+        graph = {'A': ['B', 'C'],
+                 'B': ['D', 'E'],
+                 'C': ['D'],
+                 'D': ['E']}
+
+        self.assertEqual([('A','B','E')], short_path(graph,'A','E'))
 
     def test_simple_path(self):
         graph = {'A': ['B', 'C'],
@@ -90,16 +97,16 @@ class Desafio2(unittest.TestCase):
                      'D': ['C'],
                      'E': ['F'],
                      'F': ['C']}
-        self.assertEqual(['A','B'], short_path(graph,'A','B'))
+        self.assertEqual([('A','B')], short_path(graph,'A','B'))
 
-    def test_complex_path(self):
+    def test_multiple_path(self):
         graph = {'A': ['B', 'C'],
                      'B': ['C', 'D'],
                      'C': ['D'],
                      'D': ['C'],
                      'E': ['F'],
                      'F': ['C']}
-        self.assertEqual(['A','C','D'], short_path(graph,'A','D'))
+        self.assertEqual([ ('A','B','D'),('A','C','D')], short_path(graph,'A','D'))
 
 if __name__ == '__main__':
     unittest.main()    
