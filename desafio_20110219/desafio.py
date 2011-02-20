@@ -106,7 +106,9 @@ class Desafio2(unittest.TestCase):
                      'D': ['C'],
                      'E': ['F'],
                      'F': ['C']}
-        self.assertEqual([ ('A','B','D'),('A','C','D')], short_path(graph,'A','D'))
+        sp = short_path(graph,'A','D')
+        sp.sort()
+        self.assertEqual([ ('A','B','D'),('A','C','D')],sp)
 
 if __name__ == '__main__':
     unittest.main()    
