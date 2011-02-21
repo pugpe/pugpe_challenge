@@ -9,11 +9,18 @@ Como  ?
 Qualquer um pode indicar um problema para o PUG-PE challenge.  Aqueles que proporem para a sexta, o que lançar primeiro será lançado e os subsequentes entrarão em uma lista de espera onde serão avaliados em semanas seguintes.  A pontuação será distribuída por :
 
 A solução mais pythonica - 3 pontos  (menos linhas de codigo)
-A solução mais criativa -  5 pontos 
+A solução mais criativa -  3 pontos 
 Os que proporem solução que funciona  - 2 pontos
 O primeiro que propor a solucao que funciona  -  1 ponto
 
+A pontuação será cumulativa. Então se o primeiro que solucionar o problema e também propor a mais criativa: Já ganha 6 pontos (5 + 1) . 
+Vale destacar que como nós não sabemos se o cara copiou ou não a solução do outro, iremos estabelecer que o primeiro em ordem de pull request ira ganhar a pontuacao maxima para os casos de pythonica/criativa. 
 
 A discussão dos pontos será levada em conta pelos membros do grupo que julgarão as soluções em uma destas categorias. No final será elencado um ranking semanal dos membros e suas respectivas pontuações. 
+
+PONTUAÇÃO 21/02/2011
+1)   Lauro Moura -  6 pontos ( Solucao Pythonica 3 + Que funciona 2  + Primeiro a propor 1) 
+2)   Rafael Caricio -  5 pontos (Solucao Criativa 3 + Que funciona 2 )
+3)   Marcel , Nielson, Guilherme Medeiros,  Henrique Menezes - 2 pontos (solucoes que funcionam)
 
 
