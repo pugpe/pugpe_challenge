@@ -27,7 +27,7 @@ O objetivo deste problema eh transpor uma matriz.
     >>> ret = transpose([[1,2]])  
     >>> ret
     [[1],[2]]
-    >>> ret = tranpose([[1,2], [3,4], [5,6]])
+    >>> ret = transpose([[1,2], [3,4], [5,6]])
     >>> ret
     [[1,3,5], [2,4,6]]
      
