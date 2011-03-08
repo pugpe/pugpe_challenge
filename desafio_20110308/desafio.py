@@ -40,7 +40,7 @@ O objetivo deste problema eh transpor uma matriz.
 import unittest
 
 
-class Desafio3(unittest.TestCase):
+class Desafio4(unittest.TestCase):
 
     def test_empty_list(self):
         self.assertEqual([],
