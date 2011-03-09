@@ -47,7 +47,7 @@ class Desafio4(unittest.TestCase):
                     transpose([]))
 
     def test_unit_list(self):
-        self.assertEqual([1], transpose([[1]]))
+        self.assertEqual([[1]], transpose([[1]]))
 
     def test_simple_List(self):
         self.assertEqual([[1],[2]], transpose([[1,2]]))
