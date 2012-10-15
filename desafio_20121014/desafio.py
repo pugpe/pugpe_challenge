@@ -3,7 +3,7 @@ Desafio PUG-PE
 ID: 7
 SEMANA: 15/10/2012
 
-Problema: Achar o conjunto de todas as partições de um dado conjunto.
+Problema: Achar o conjunto de todas as partições de um dado conjunto de strings.
     Ex:
     >>> x = ['a', 'b']
     >>> ret = subset(x)
@@ -25,5 +25,9 @@ class Desafio7(unittest.TestCase):
     def test_find_powerset(self):
         set_1 = ['a', 'b']
         set_2 = ['a', 'b', 'c']
+        set_3 = ['']
+        set_4 = ['a']
         self.assertEqual(['', 'a', 'b', ('a', 'b')], subset(set_1))
         self.assertEqual(['', 'a', 'b', 'c', ('a', 'b'), ('a', 'c'), ('b', 'c'), ('a', 'b', 'c')], subset(set_2))
+        self.assertEqual([''], subset(set_3))
+        self.assertEqual(['', 'a'], subset(set_4))
