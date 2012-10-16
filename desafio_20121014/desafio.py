@@ -1,3 +1,5 @@
+#-*- coding:utf-8 -*-
+
 """
 Desafio PUG-PE
 ID: 7
@@ -20,6 +22,10 @@ Problema: Achar todas as partições de uma dada lista de strings.
 import unittest
 
 
+def subset(set):
+    return
+
+
 class Desafio7(unittest.TestCase):
 
     def test_find_powerset(self):
@@ -34,3 +40,4 @@ class Desafio7(unittest.TestCase):
         self.assertEqual([[''], ['a']], subset(set_4))
         self.assertEqual([], subset(set_5))
 
+unittest.main()
