@@ -28,7 +28,7 @@ def subset(set):
 
 class Desafio7(unittest.TestCase):
 
-    def test_find_powerset(self):
+    def test_find_subset(self):
         set_1 = ['a', 'b']
         set_2 = ['a', 'b', 'c']
         set_3 = ['']
