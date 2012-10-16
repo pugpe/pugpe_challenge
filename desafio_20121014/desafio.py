@@ -40,4 +40,5 @@ class Desafio7(unittest.TestCase):
         self.assertEqual([[''], ['a']], subset(set_4))
         self.assertEqual([], subset(set_5))
 
-unittest.main()
+if __name__ == '__main__':
+    unittest.main()
