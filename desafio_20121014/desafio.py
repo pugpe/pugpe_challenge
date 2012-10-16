@@ -8,11 +8,11 @@ SEMANA: 15/10/2012
 Problema: Achar todas as partições de uma dada lista de strings.
     Ex:
     >>> x = ['a', 'b']
-    >>> ret = partitions(x)
+    >>> ret = subset(x)
     >>> ret
     >>> [[''], ['a'], ['b'], ['a', 'b']]
     >>> y = ['a', 'b', 'c']
-    >>> ret = partitions()
+    >>> ret = subset()
     >>> ret
     >>> [[''], ['a'], ['b'], ['c'], ['a', 'b'], ['a', 'c'], ['b', 'c'], ['a', 'b', 'c']]
 
