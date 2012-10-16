@@ -30,7 +30,7 @@ class Desafio7(unittest.TestCase):
         set_5 = []
         self.assertEqual([[''], ['a'], ['b'], ['a', 'b']], subset(set_1))
         self.assertEqual([[''], ['a'], ['b'], ['c'], ['a', 'b'], ['a', 'c'], ['b', 'c'], ['a', 'b', 'c']], subset(set_2))
-        self.assertEqual([''], subset(set_3))
-        self.assertEqual(['', ['a']], subset(set_4))
+        self.assertEqual([['']], subset(set_3))
+        self.assertEqual([[''], ['a']], subset(set_4))
         self.assertEqual([], subset(set_5))
 
